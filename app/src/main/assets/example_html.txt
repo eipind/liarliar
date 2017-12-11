@@ -1,0 +1,6 @@
+<![CDATA[
+<h1>Example</h1>
+<p>Here is an example dialogue between a liar and a regular player where the word is "Glasses":</p>
+<p><em>Reg: Do people eat it?</em><br /><em>Liar: Yeah, probably too much though.</em></p>
+<p>Here the regular asked a question which has nothing to do with the word which makes it obvious that the liar does not know what the word is based on their answer. However, the other players may think the regular player is ALSO liar because the question had nothing to do with the word.</p>
+]]>

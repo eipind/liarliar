@@ -1,0 +1,7 @@
+<![CDATA[
+<h1>Rules</h1>
+<p>This game requires a minimum of 3 people, the recommended amount would be at least 5.</p>
+<p>In this game, there are the regular players and at least one liar. All players take turns handing the device around, pressing 'Reveal' to receive a word and then sequentially pressing 'Next Player' to hide their word before passing the device. <br />Players will either have a received the liar symbol (fingers crossed) or a word. This will establish who are the regular players and who are the liars.</p>
+<p>You go round in a rotation twice and every player gets to ask any other player a yes/no question about the word and the recipient of the said question must answer it and can elaborate.</p>
+<p>The aim of the game is for the regular players is to figure out who the liars (or singular, liar) are and identify them correctly. The aim for the liars (liar) is to trick the rest of the players to&nbsp;misidentify who the liars (liar) are.</p>
+]]>

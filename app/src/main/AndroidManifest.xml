@@ -10,23 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity android:name=".MainActivity">
-        </activity>
-        <activity
-            android:name=".InstructionsActivity"
-            android:label="@string/title_activity_instructions"
-            android:theme="@style/Theme.AppCompat" />
-        <activity android:name=".SortingActivity"
-            android:label="@string/title_activity_sorting"
-            android:theme="@style/Theme.AppCompat"/>
-        <activity
-            android:name=".TabbedActivity"
-            android:label="TESTING INSTRUCTIONS."
-            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".SortingActivity"
+            android:label="@string/title_activity_sorting"
+            android:theme="@style/Theme.AppCompat"/>
+        <activity
+            android:name=".InstructionsActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
         </activity>
     </application>
 

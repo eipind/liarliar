@@ -16,4 +16,28 @@
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_sorting">Sorting</string>
+    <string name="instructions_rules_fragment_title">Rules</string>
+    <string name="instructions_tips_fragment_title">Tips</string>
+    <string name="instructions_example_fragment_title">Example</string>
+
+    <string name="rules_formatted">
+        &lt;h1>Rules&lt;/h1>
+        &lt;p>This game requires a minimum of 3 people, the recommended amount would be at least 5.&lt;/p>
+        &lt;p>In this game, there are the regular players and at least one liar. All players take turns handing the device around, pressing \'Reveal\' to receive a word and then sequentially pressing \'Next Player\' to hide their word before passing the device. &lt;br />Players will either have a received the liar symbol (fingers crossed) or a word. This will establish who are the regular players and who are the liars.&lt;/p>
+        &lt;p>You go round in a rotation twice and every player gets to ask any other player a yes/no question about the word and the recipient of the said question must answer it and can elaborate.&lt;/p>
+        &lt;p>The aim of the game is for the regular players is to figure out who the liars (or singular, liar) are and identify them correctly. The aim for the liars (liar) is to trick the rest of the players to misidentify who the liars (liar) are.&lt;/p>
+    </string>
+    <string name="tips_formatted">
+        &lt;h1>Tips&lt;/h1>
+        &lt;h3>For Liars&lt;/h3>
+        &lt;p>You did not receive the word so you must lie in response, if given a question, to fool the regular players. You must also create questions to make it seem like you know what the word is.&lt;/p>
+        &lt;h3>For Regular Players&lt;/h3>
+        &lt;p>Use your answers to these questions and the questions themselves should help you identify who the liars are and who the regular players are. At the end of the game you must, as a majority, decide who is the liar(s). However, if you as a group wish to make the decision earlier you may. You only have as many chances to guess the liar as there are liars i.e. if there are 2 liars you get 2 chances.&lt;/p>
+    </string>
+    <string name="example_formatted">
+        &lt;h1>Example&lt;/h1>
+        &lt;p>Here is an example dialogue between a liar and a regular player where the word is "Glasses":&lt;/p>
+        &lt;p>&lt;em>Reg: Do people eat it?&lt;/em>&lt;br />&lt;em>Liar: Yeah, probably too much though.&lt;/em>&lt;/p>
+        &lt;p>Here the regular asked a question which has nothing to do with the word which makes it obvious that the liar does not know what the word is based on their answer. However, the other players may think the regular player is ALSO liar because the question had nothing to do with the word.&lt;/p>
+    </string>
 </resources>
