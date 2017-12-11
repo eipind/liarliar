@@ -37,7 +37,6 @@ public class InstructionsActivity extends AppCompatActivity {
         tl.setupWithViewPager(pager);
     }
 
-
     @Override
     public boolean onSupportNavigateUp() {
         startActivity(new Intent(this, MainActivity.class));
@@ -48,9 +47,7 @@ public class InstructionsActivity extends AppCompatActivity {
 
         private static final String ARG_SECTION_NUMBER = "section_number";
 
-        public InstructionFragment() {
-        }
-
+        public InstructionFragment() {}
 
         public static InstructionFragment newInstance(int sectionNumber) {
             InstructionFragment fragment = new InstructionFragment();

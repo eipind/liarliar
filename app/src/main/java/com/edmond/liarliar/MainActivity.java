@@ -11,6 +11,7 @@ import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -64,6 +65,26 @@ public class MainActivity extends AppCompatActivity implements KeyListener {
                 }
             }
         });
+        numberOfPlayersText.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                numberOfPlayersText.performClick();
+                System.out.println("public boolean onTouch(View v, MotionEvent event)");
+                if(numberOfPlayersText.getText() != null && numberOfPlayersText.getText().toString().length() != 0)
+                numberOfPlayersText.setSelection(numberOfPlayersText.getText().toString().split(" ")[0].length());
+                return false;
+            }
+        });
+
+        // needed in order to next line work properly
+        numberOfPlayersText.setTextIsSelectable(true);
+        numberOfPlayersText.setTextIsSelectable(false);
+
+        // restore soft keyboard functionality broken by previous line
+        numberOfPlayersText.setFocusableInTouchMode(true);
+        numberOfPlayersText.setFocusable(true);
+        numberOfPlayersText.setClickable(true);
+        numberOfPlayersText.setCursorVisible(true);
     }
 
     @Override
