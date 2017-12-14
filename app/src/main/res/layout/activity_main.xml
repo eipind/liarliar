@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,23 +9,26 @@
 
     <include layout="@layout/custom_action_bar"/>
 
-    <EditText
-         android:id="@+id/numOfPlayers"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:gravity="fill|left"
-         android:hint="Number of Players"
-         android:clickable="false"
-         android:inputType="number"
-         android:maxLines="1"
-         android:selectAllOnFocus="true"
-         android:drawableLeft="@drawable/ic_people"
-         android:drawablePadding="3dp"
-         app:layout_constraintBottom_toBottomOf="parent"
-         app:layout_constraintLeft_toLeftOf="parent"
-         app:layout_constraintRight_toRightOf="parent"
-         app:layout_constraintTop_toTopOf="parent"
-         app:layout_constraintVertical_bias="0.3" />
+    <com.edmond.liarliar.SuffixEditText
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/numOfPlayers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="fill|left"
+        android:hint="Number of Players"
+        android:clickable="false"
+        android:inputType="number"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:drawableLeft="@drawable/ic_people"
+        android:drawablePadding="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        custom:singular="@string/suffix_edit_text_singular"
+        custom:plural="@string/suffix_edit_text_plural" />
 
     <Button
         android:id="@+id/button"

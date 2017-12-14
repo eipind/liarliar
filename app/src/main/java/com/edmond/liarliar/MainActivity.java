@@ -1,17 +1,14 @@
 package com.edmond.liarliar;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
-import android.text.InputFilter;
-import android.text.TextWatcher;
 import android.text.method.KeyListener;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -24,67 +21,6 @@ public class MainActivity extends AppCompatActivity implements KeyListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Utils.setUpTitleBar(this);
-        suffixEditTextView();
-    }
-
-    private void suffixEditTextView() {
-        final EditText numberOfPlayersText = findViewById(R.id.numOfPlayers);
-        numberOfPlayersText.addTextChangedListener(new TextWatcher() {
-            private Integer currentNumber = -1;
-            private int lengthOfNumber;
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {}
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                try{
-
-                    if(currentNumber != Integer.parseInt(s.toString().split(" ")[0])){
-
-                        currentNumber = Integer.parseInt(s.toString().split(" ")[0]);
-                        lengthOfNumber = String.valueOf(currentNumber).length();
-
-                        InputFilter[] filters = s.getFilters();
-                        s.setFilters(new InputFilter[] {});
-                        s.delete(lengthOfNumber, s.length());
-
-                        if(currentNumber == 1){
-                            s.append(" player");
-                        }else{
-                            s.append(" players");
-                        }
-                        numberOfPlayersText.setSelection(lengthOfNumber);
-                        s.setFilters(filters);
-                    }
-
-                }catch(NumberFormatException e){
-                    s.clear();
-                }
-            }
-        });
-        numberOfPlayersText.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                numberOfPlayersText.performClick();
-                System.out.println("public boolean onTouch(View v, MotionEvent event)");
-                if(numberOfPlayersText.getText() != null && numberOfPlayersText.getText().toString().length() != 0)
-                numberOfPlayersText.setSelection(numberOfPlayersText.getText().toString().split(" ")[0].length());
-                return false;
-            }
-        });
-
-        // needed in order to next line work properly
-        numberOfPlayersText.setTextIsSelectable(true);
-        numberOfPlayersText.setTextIsSelectable(false);
-
-        // restore soft keyboard functionality broken by previous line
-        numberOfPlayersText.setFocusableInTouchMode(true);
-        numberOfPlayersText.setFocusable(true);
-        numberOfPlayersText.setClickable(true);
-        numberOfPlayersText.setCursorVisible(true);
     }
 
     @Override
