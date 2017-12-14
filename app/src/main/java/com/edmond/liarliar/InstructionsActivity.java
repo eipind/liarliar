@@ -25,7 +25,7 @@ public class InstructionsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_instructions);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("Instructions");
+        toolbar.setTitle(R.string.title_activity_instructions);
         setSupportActionBar(toolbar);
         Utils.setUpBackIndicator(this);
         SectionsPagerAdapter adapter = new SectionsPagerAdapter(getSupportFragmentManager());

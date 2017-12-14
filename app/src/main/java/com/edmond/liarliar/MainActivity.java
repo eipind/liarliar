@@ -3,10 +3,7 @@ package com.edmond.liarliar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Editable;
-import android.text.method.KeyListener;
 import android.view.Gravity;
-import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -14,7 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import java.util.Random;
-public class MainActivity extends AppCompatActivity implements KeyListener {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,9 +33,6 @@ public class MainActivity extends AppCompatActivity implements KeyListener {
                 Intent intent = new Intent(this, InstructionsActivity.class);
                 startActivity(intent);
                 break;
-            default:
-                Toast.makeText(this, "MenuItem (item) not recognised.", Toast.LENGTH_SHORT).show();
-                break;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -50,28 +44,30 @@ public class MainActivity extends AppCompatActivity implements KeyListener {
         Integer players;
         try{
             players = Integer.parseInt(numberOfPlayersText.getText().toString().split(" ")[0]);
+
             if(!playersValid(players)) return;
-            Random r = new Random();
-            int liars = r.nextInt((int)(players*0.4)) + 1;
-            String word = Utils.choseNewWord(this);
-            Utils.start(this, createList(players, liars), word);
+
+            double liars_percentage = Utils.getPercentage(R.integer.max_num_liars_percentage, this);
+
+            int liars = Utils.getRandom().nextInt((int)(players*liars_percentage)) + 1;
+
+            Utils.start(this, createList(players, liars));
             startActivity(intent);
             overridePendingTransition(R.anim.go_left_enter, R.anim.go_left_exit);
         }catch (NumberFormatException e){
-            Toast.makeText(this, "Number format not recognised.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.number_format_exception, Toast.LENGTH_SHORT).show();
         }
     }
 
     private boolean playersValid(int players){
-        int min_num_of_players = 2;
-        int max_num_of_players = 99;
+        int min_num_of_players = getResources().getInteger(R.integer.min_num_players);
         if(players <= min_num_of_players ||
-                players >  max_num_of_players ){
+                players >  getResources().getInteger(R.integer.max_num_players)){
             Toast t;
             if(players <= min_num_of_players){
-                t = Toast.makeText(this, "Must have more than 2 players.", Toast.LENGTH_SHORT);
+                t = Toast.makeText(this, R.string.num_player_hint_err_less_2, Toast.LENGTH_SHORT);
             }else{
-                t = Toast.makeText(this, "Must have less than 99 players.", Toast.LENGTH_SHORT);
+                t = Toast.makeText(this, R.string.num_player_hint_err_more_99, Toast.LENGTH_SHORT);
             }
             t.setGravity(Gravity.CENTER, 0, 0);
             t.show();
@@ -103,33 +99,4 @@ public class MainActivity extends AppCompatActivity implements KeyListener {
         }
     }
 
-    @Override
-    public int getInputType() {
-        return 0;
-    }
-
-    @Override
-    public boolean onKeyDown(View view, Editable text, int keyCode, KeyEvent event) {
-        return false;
-    }
-
-    @Override
-    public boolean onKeyUp(View view, Editable text, int keyCode, KeyEvent event) {
-        return false;
-    }
-
-    @Override
-    public boolean onKeyOther(View view, Editable text, KeyEvent event) {
-        return false;
-    }
-
-    @Override
-    public void clearMetaKeyState(View view, Editable content, int states) {
-
-    }
-
-    @Override
-    public void onPointerCaptureChanged(boolean hasCapture) {
-
-    }
 }

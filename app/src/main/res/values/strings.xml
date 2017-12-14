@@ -3,7 +3,7 @@
     <string name="title_activity_instructions">Instructions</string>
     <string name="num_player_hint">Number of Players</string>
     <string name="num_player_hint_err_less_2">Number of players must be greater than 2</string>
-    <string name="num_player_hint_err_more_99">Number of players must be less than 99</string>
+    <string name="num_player_hint_err_more_99">Number of players must be less than 100</string>
     <string name="start_sorting">Start</string>
     <string name="reveal_player">Reveal</string>
     <string name="next_player">Next Player</string>
@@ -12,13 +12,11 @@
     <string name="liarliardata_filename">lld</string>
     <string name="actionbar_font_filename">fonts/Lobster_1.3.otf</string>
     <string name="word_reveal_font">fonts/expressway rg.ttf</string>
-    <string name="title_activity_tabbed">TabbedActivity</string>
-    <string name="action_settings">Settings</string>
-    <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_sorting">Sorting</string>
     <string name="instructions_rules_fragment_title">Rules</string>
     <string name="instructions_tips_fragment_title">Tips</string>
     <string name="instructions_example_fragment_title">Example</string>
     <string name="suffix_edit_text_plural">players</string>
     <string name="suffix_edit_text_singular">player</string>
+    <string name="number_format_exception">Number format not recognised.</string>
 </resources>

@@ -59,10 +59,10 @@ public final class Utils {
 
     private static final Random RANDOM = new Random();
 
-    public static void start(Activity activity, boolean [] arr, String word){
-        saveObj(activity, new LiarLiarData(0, arr, word));
+    public static void start(AppCompatActivity activity, boolean [] arr){
+        saveObj(activity, new LiarLiarData(0, arr, choseNewWord(activity)));
     }
-    private static void saveObj(Activity activity, LiarLiarData lld){
+    private static void saveObj(AppCompatActivity activity, LiarLiarData lld){
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
 
         try(ObjectOutputStream oos = new ObjectOutputStream(bos)){
@@ -105,7 +105,7 @@ public final class Utils {
         return res;
     }
 
-    public static String choseNewWord(AppCompatActivity activity){
+    private static String choseNewWord(AppCompatActivity activity){
         InputStream in;
         String word = null;
         String WORDLIST_FILENAME ="Wordlist.txt";
@@ -159,6 +159,11 @@ public final class Utils {
     public static void setUpTitleBar(AppCompatActivity activity){
         setUpToolBar(activity, activity.getResources().getString(R.string.app_name));
         Toolbar tb = activity.findViewById(R.id.toolbar);
+    }
+
+    public static double getPercentage(int resId, AppCompatActivity activity){
+        int percentage = activity.getResources().getInteger(resId);
+        return (double) percentage/100d;
     }
 
 }
