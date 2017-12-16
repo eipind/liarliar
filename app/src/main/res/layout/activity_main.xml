@@ -36,10 +36,12 @@
         android:layout_width="@id/numOfPlayers"
         android:text="Start Playing"
         android:onClick="startSorting"
+        android:textColor="@color/white"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="@id/numOfPlayers"
         app:layout_constraintRight_toRightOf="@id/numOfPlayers"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/AppTheme.RoundedCornerMaterialButton"/>
 
 </android.support.constraint.ConstraintLayout>

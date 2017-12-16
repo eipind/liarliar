@@ -19,4 +19,5 @@
     <string name="suffix_edit_text_plural">players</string>
     <string name="suffix_edit_text_singular">player</string>
     <string name="number_format_exception">Number format not recognised.</string>
+    <string name="card_heading">The word for this game of LiarLiar is:</string>
 </resources>

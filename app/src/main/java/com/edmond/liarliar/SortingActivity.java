@@ -57,7 +57,7 @@ public class SortingActivity extends AppCompatActivity {
     private void showWord(){
         TextView gameWordText = findViewById(R.id.playing_word_text);
         // gameWordText.setTypeface(Typeface.createFromAsset(this.getAssets(), "fonts/expressway rg.ttf"));
-        gameWordText.setText(Utils.getCurrentWord(this));
+        gameWordText.setText(Utils.getCurrentWord(this).toUpperCase());
     }
 
     public void showActivity(State s){

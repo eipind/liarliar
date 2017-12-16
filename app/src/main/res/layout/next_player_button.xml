@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Button xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/next_player_button"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="8dp"
-    android:layout_marginTop="8dp"
     android:text="Next Player"
+    android:textColor="@color/white"
     android:textAllCaps="false"
     android:onClick="onClickNextPlayer"
     app:layout_constraintBottom_toBottomOf="parent"
@@ -16,4 +14,4 @@
     app:layout_constraintRight_toRightOf="parent"
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintVertical_bias="0.7"
-    tools:context="com.edmond.liarliar.SortingActivity"/>
+    style="@style/AppTheme.RoundedCornerMaterialButton"/>
