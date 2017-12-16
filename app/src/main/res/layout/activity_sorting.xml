@@ -11,8 +11,7 @@
         android:layout_height="match_parent"
         android:id="@+id/fLayout">
 
-        <include layout="@layout/to _reveal"
-            android:id="@+id/reveal_scene"/>
+        <include layout="@layout/to_reveal" />
 
     </FrameLayout>
 

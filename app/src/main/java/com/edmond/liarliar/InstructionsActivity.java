@@ -24,16 +24,16 @@ public class InstructionsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_instructions);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.title_activity_instructions);
         setSupportActionBar(toolbar);
         Utils.setUpBackIndicator(this);
         SectionsPagerAdapter adapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
-        ViewPager pager = (ViewPager) findViewById(R.id.container);
+        ViewPager pager = findViewById(R.id.container);
         pager.setAdapter(adapter);
 
-        TabLayout tl = (TabLayout) findViewById(R.id.tab_layout);
+        TabLayout tl = findViewById(R.id.tab_layout);
         tl.setupWithViewPager(pager);
     }
 
@@ -61,7 +61,7 @@ public class InstructionsActivity extends AppCompatActivity {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_instructions, container, false);
-            TextView textView = (TextView) rootView.findViewById(R.id.instruction_textbox);
+            TextView textView = rootView.findViewById(R.id.instruction_textbox);
             setInstructionContent(textView, (int) getArguments().get(ARG_SECTION_NUMBER));
             return rootView;
         }

@@ -18,6 +18,6 @@
         &lt;h1>Example&lt;/h1>
         &lt;p>Here is an example dialogue between a liar and a regular player where the word is "Glasses":&lt;/p>
         &lt;p>&lt;em>Reg: Do people eat it?&lt;/em>&lt;br />&lt;em>Liar: Yeah, probably too much though.&lt;/em>&lt;/p>
-        &lt;p>Here the regular asked a question which has nothing to do with the word which makes it obvious that the liar does not know what the word is based on their answer. However, the other players may think the regular player is ALSO liar because the question had nothing to do with the word.&lt;/p>
+        &lt;p>Here the regular asked a question which has nothing to do with the word which makes it obvious that the liar does not know what the word is based on their answer. However, the other players may think the regular player is &lt;b>ALSO&lt;/b> liar because the question had nothing to do with the word.&lt;/p>
     </string>
 </resources>

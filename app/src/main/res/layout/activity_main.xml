@@ -14,8 +14,8 @@
         android:id="@+id/numOfPlayers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="fill|left"
-        android:hint="Number of Players"
+        android:gravity="fill|start"
+        android:hint="@string/num_players_hint"
         android:clickable="false"
         android:inputType="number"
         android:maxLines="1"
@@ -31,10 +31,10 @@
         custom:plural="@string/suffix_edit_text_plural" />
 
     <Button
-        android:id="@+id/button"
         android:layout_height="wrap_content"
         android:layout_width="@id/numOfPlayers"
-        android:text="Start Playing"
+        android:text="@string/start_playing"
+        android:padding="8dp"
         android:onClick="startSorting"
         android:textColor="@color/white"
         android:textAllCaps="false"
@@ -42,6 +42,6 @@
         app:layout_constraintLeft_toLeftOf="@id/numOfPlayers"
         app:layout_constraintRight_toRightOf="@id/numOfPlayers"
         app:layout_constraintTop_toTopOf="parent"
-        style="@style/AppTheme.RoundedCornerMaterialButton"/>
+        style="@style/AppTheme.RoundedCornerMaterialButton" />
 
 </android.support.constraint.ConstraintLayout>

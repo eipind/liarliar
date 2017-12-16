@@ -1,17 +1,12 @@
 <resources>
     <string name="app_name">LiarLiar</string>
     <string name="title_activity_instructions">Instructions</string>
-    <string name="num_player_hint">Number of Players</string>
     <string name="num_player_hint_err_less_2">Number of players must be greater than 2</string>
     <string name="num_player_hint_err_more_99">Number of players must be less than 100</string>
-    <string name="start_sorting">Start</string>
-    <string name="reveal_player">Reveal</string>
     <string name="next_player">Next Player</string>
-    <string name="start_game">Sorting Complete</string>
-    <string name="wordlist_filename">Wordlist.txt</string>
-    <string name="liarliardata_filename">lld</string>
+    <string name="num_players_hint">Number of Players</string>
+    <string name="start_playing">Start Playing</string>
     <string name="actionbar_font_filename">fonts/Lobster_1.3.otf</string>
-    <string name="word_reveal_font">fonts/expressway rg.ttf</string>
     <string name="title_activity_sorting">Sorting</string>
     <string name="instructions_rules_fragment_title">Rules</string>
     <string name="instructions_tips_fragment_title">Tips</string>
@@ -20,4 +15,7 @@
     <string name="suffix_edit_text_singular">player</string>
     <string name="number_format_exception">Number format not recognised.</string>
     <string name="card_heading">The word for this game of LiarLiar is:</string>
+    <string name="liarliar_text">You are the liar, good luck!</string>
+    <string name="reveal">Reveal</string>
+    <string name="sorting_end">Sorting Ended</string>
 </resources>

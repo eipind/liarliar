@@ -148,7 +148,7 @@ public final class Utils {
     public static void setUpToolBar(AppCompatActivity activity, String message){
         Toolbar tb = activity.findViewById(R.id.toolbar);
         tb.setTitle("");
-        ((AppCompatActivity)activity).setSupportActionBar(tb);
+        activity.setSupportActionBar(tb);
         TextView tv = activity.findViewById(R.id.toolbar_title);
         Typeface face = Typeface.createFromAsset(activity.getAssets(), activity.getResources().getString(R.string.actionbar_font_filename));
 

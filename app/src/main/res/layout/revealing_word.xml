@@ -8,8 +8,7 @@
     tools:context="com.edmond.liarliar.SortingActivity">
 
     <android.support.v7.widget.CardView
-        android:id="@+id/cardview"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
@@ -70,7 +69,7 @@
         layout="@layout/next_player_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintVertical_bias="0.7"
+        app:layout_constraintVertical_bias="0.8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
