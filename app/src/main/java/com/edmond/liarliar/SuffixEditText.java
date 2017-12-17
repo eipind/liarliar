@@ -14,18 +14,20 @@ import org.w3c.dom.Attr;
  */
 
 public class SuffixEditText extends android.support.v7.widget.AppCompatEditText {
+    private String plural, single;
     public SuffixEditText(Context context) {
         super(context);
+        extraSetUp();
     }
 
     public SuffixEditText(Context context, AttributeSet attrs) {
         super(context, attrs);
-        extraSetUp(attrs);
+        extraSetUp();
     }
 
     public SuffixEditText(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        extraSetUp(attrs);
+        extraSetUp();
     }
 
     @Override
@@ -36,20 +38,11 @@ public class SuffixEditText extends android.support.v7.widget.AppCompatEditText 
         return super.performClick();
     }
 
-    private void extraSetUp(AttributeSet attrs) {
-
-        TypedArray tArray = getContext().getTheme().obtainStyledAttributes(attrs, R.styleable.SuffixEditText, 0,0);
-        final String singular, plural;
-
-        try {
-            singular = tArray.getString(R.styleable.SuffixEditText_singular);
-            plural = tArray.getString(R.styleable.SuffixEditText_plural);
-        } finally {
-            tArray.recycle();
-        }
+    private void extraSetUp() {
+        single = getResources().getQuantityString(R.plurals.suffix_edit_text, 1);
+        plural = getResources().getQuantityString(R.plurals.suffix_edit_text, 2);
 
         this.addTextChangedListener(new TextWatcher() {
-
             private Integer currentNumber = -1;
             private int lengthOfNumber;
 
@@ -77,13 +70,11 @@ public class SuffixEditText extends android.support.v7.widget.AppCompatEditText 
                         s.delete(lengthOfNumber, s.length());
                         switch(currentNumber){
                             case 1:
-                                s.append(" " + singular);
+                                s.append(" " + single);
                                 break;
                             default:
                                 s.append(" " + plural);
-                                break;
                         }
-
                         setSelection(lengthOfNumber);
                         s.setFilters(filters);
                     }
@@ -93,12 +84,9 @@ public class SuffixEditText extends android.support.v7.widget.AppCompatEditText 
                 }
             }
         });
-
-        // needed in order to next line work properly
         setTextIsSelectable(true);
         setTextIsSelectable(false);
 
-        // restore soft keyboard functionality broken by previous line
         setFocusableInTouchMode(true);
         setFocusable(true);
         setClickable(true);

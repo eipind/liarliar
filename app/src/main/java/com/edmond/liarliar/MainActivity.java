@@ -37,9 +37,10 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onBackPressed(){}
 
     public void startSorting(View view) {
-        Intent intent = new Intent(this, SortingActivity.class);
         EditText numberOfPlayersText = findViewById(R.id.numOfPlayers);
         Integer players;
         try{
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
             int liars = Utils.getRandom().nextInt((int)(players*liars_percentage)) + 1;
 
             Utils.start(this, createList(players, liars));
-            startActivity(intent);
+            startActivity(SortingActivity.newIntent(this, liars, players));
             overridePendingTransition(R.anim.go_left_enter, R.anim.go_left_exit);
         }catch (NumberFormatException e){
             Toast.makeText(this, R.string.number_format_exception, Toast.LENGTH_SHORT).show();

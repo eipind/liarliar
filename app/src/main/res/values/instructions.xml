@@ -2,10 +2,10 @@
 <resources>
     <string name="rules_formatted">
         &lt;h1>Rules&lt;/h1>
-        &lt;p>This game requires a minimum of 3 people, the recommended amount would be at least 5.&lt;/p>
-        &lt;p>In this game, there are be one or more liars and regular players. All players take turns handing the device around, pressing the \'Reveal\' button to receive a card and then sequentially pressing the \'Next Player\' button to hide the card before passing the device. &lt;br />Players will either have received the liar card or the word card. This will establish who the regular players are and who the liars are.&lt;/p>
+        &lt;p>This game requires a minimum of 3 people, the recommended amount would be at least 5 and no more than 10.&lt;/p>
+        &lt;p>In this game, there can be one or more liars and the rest are regular players. All players take turns handing the device around, pressing the \'Reveal\' button to receive a card and then sequentially pressing the \'Next Player\' button to hide the card before passing the device. &lt;br />Players will either have received the liar card or the word card. This will establish who the regular players are and who the liars are.&lt;/p>
         &lt;p>You should go round in a rotation (\'left from dealer\' style) for the number of liars + 1 (if there are 2 liars, then 3 rounds). Every player has to ask any other player a yes/no question about the word and the recipient of the question must answer and can elaborate if they wish.&lt;/p>
-        &lt;p>The aim of the game is for the regular players to figure out who the liars are and identify them correctly, if the majority of the players are comfortable voting (including the liars) you may do so before the rounds are done. The aim for the liars is to trick the rest of the players into misidentifying who the liars are, they can also win by figuring out what the word is.&lt;/p>
+        &lt;p>The aim of the game is for the regular players to figure out who the liars are and identify them correctly. If the majority of the players are comfortable voting (including the liars) you may do so before the rounds are done. The aim for the liars is to trick the rest of the players into misidentifying who the liars are, they can also win by figuring out what the word is.&lt;/p>
     </string>
     <string name="tips_formatted">
         &lt;h1>Tips&lt;/h1>

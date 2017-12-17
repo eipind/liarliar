@@ -11,11 +11,21 @@
     <string name="instructions_rules_fragment_title">Rules</string>
     <string name="instructions_tips_fragment_title">Tips</string>
     <string name="instructions_example_fragment_title">Example</string>
-    <string name="suffix_edit_text_plural">players</string>
-    <string name="suffix_edit_text_singular">player</string>
+    <plurals name="suffix_edit_text">
+        <item quantity="one">player</item>
+        <item quantity="other">players</item>
+    </plurals>
     <string name="number_format_exception">Number format not recognised.</string>
-    <string name="card_heading">The word for this game of LiarLiar is:</string>
+    <string name="word_card_heading">The word for this game of LiarLiar is:</string>
     <string name="liarliar_text">You are the liar, good luck!</string>
     <string name="reveal">Reveal</string>
     <string name="sorting_end">Sorting Ended</string>
+    <plurals name="reveal_card_tile">
+        <item quantity="one">There is 1 player left to be sorted...</item>
+        <item quantity="other">There are %d players left to be sorted...</item>
+    </plurals>
+    <plurals name="reveal_card_body">
+        <item quantity="one">There is 1 liar in this game</item>
+        <item quantity="other">There are %d liars in this game</item>
+    </plurals>
 </resources>

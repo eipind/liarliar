@@ -10,7 +10,6 @@
     <include layout="@layout/custom_action_bar"/>
 
     <com.edmond.liarliar.SuffixEditText
-        xmlns:custom="http://schemas.android.com/apk/res-auto"
         android:id="@+id/numOfPlayers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -26,9 +25,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3"
-        custom:singular="@string/suffix_edit_text_singular"
-        custom:plural="@string/suffix_edit_text_plural" />
+        app:layout_constraintVertical_bias="0.3" />
 
     <Button
         android:layout_height="wrap_content"

@@ -1,7 +1,0 @@
-<![CDATA[
-<h1>Tips</h1>
-<h2>For Liars</h2>
-<p>You did not receive the word so you must lie in response, if given a question, to fool the regular players. You must also create questions to make it seem like you know what the word is.</p>
-<h2>For Regular Players</h2>
-<p>Use your answers to these questions and the questions themselves should help you identify who the liars are and who the regular players are. At the end of the game you must, as a majority, decide who is the liar(s). However, if you as a group wish to make the decision earlier you may. You only have as many chances to guess the liar as there are liars i.e. if there are 2 liars you get 2 chances.</p>
-]]>
