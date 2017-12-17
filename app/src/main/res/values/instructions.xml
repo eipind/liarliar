@@ -3,16 +3,16 @@
     <string name="rules_formatted">
         &lt;h1>Rules&lt;/h1>
         &lt;p>This game requires a minimum of 3 people, the recommended amount would be at least 5.&lt;/p>
-        &lt;p>In this game, there are the regular players and at least one liar. All players take turns handing the device around, pressing \'Reveal\' to receive a word and then sequentially pressing \'Next Player\' to hide their word before passing the device. &lt;br />Players will either have a received the liar symbol (fingers crossed) or a word. This will establish who are the regular players and who are the liars.&lt;/p>
-        &lt;p>You go round in a rotation twice and every player gets to ask any other player a yes/no question about the word and the recipient of the said question must answer it and can elaborate.&lt;/p>
-        &lt;p>The aim of the game is for the regular players is to figure out who the liars (or singular, liar) are and identify them correctly. The aim for the liars (liar) is to trick the rest of the players to misidentify who the liars (liar) are.&lt;/p>
+        &lt;p>In this game, there are be one or more liars and regular players. All players take turns handing the device around, pressing the \'Reveal\' button to receive a card and then sequentially pressing the \'Next Player\' button to hide the card before passing the device. &lt;br />Players will either have received the liar card or the word card. This will establish who the regular players are and who the liars are.&lt;/p>
+        &lt;p>You should go round in a rotation (\'left from dealer\' style) for the number of liars + 1 (if there are 2 liars, then 3 rounds). Every player has to ask any other player a yes/no question about the word and the recipient of the question must answer and can elaborate if they wish.&lt;/p>
+        &lt;p>The aim of the game is for the regular players to figure out who the liars are and identify them correctly, if the majority of the players are comfortable voting (including the liars) you may do so before the rounds are done. The aim for the liars is to trick the rest of the players into misidentifying who the liars are, they can also win by figuring out what the word is.&lt;/p>
     </string>
     <string name="tips_formatted">
         &lt;h1>Tips&lt;/h1>
         &lt;h3>For Liars&lt;/h3>
-        &lt;p>You did not receive the word so you must lie in response, if given a question, to fool the regular players. You must also create questions to make it seem like you know what the word is.&lt;/p>
+        &lt;p>You did not receive the word so you must lie in response, if given a question, to fool the regular players. You must also create questions to make it seem like you know what the word is. However, generic/vague questions may work as well (e.g. \'Can you touch it?\')&lt;/p>
         &lt;h3>For Regular Players&lt;/h3>
-        &lt;p>Use your answers to these questions and the questions themselves should help you identify who the liars are and who the regular players are. At the end of the game you must, as a majority, decide who is the liar(s). However, if you as a group wish to make the decision earlier you may. You only have as many chances to guess the liar as there are liars i.e. if there are 2 liars you get 2 chances.&lt;/p>
+        &lt;p>Use players answers to these questions and the questions themselves to help you identify who the liars are and who the regular players are. At the end of the game you must, as a majority, decide who the liars are. However, if you as a group wish to make the decision earlier you may. You only have as many chances to guess the liar as there are liars i.e. if there are 2 liars you get 2 chances.&lt;/p>
     </string>
     <string name="example_formatted">
         &lt;h1>Example&lt;/h1>
