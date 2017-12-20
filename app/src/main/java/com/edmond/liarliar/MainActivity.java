@@ -10,8 +10,12 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import java.util.Random;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
+    private List<Boolean> playersList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +34,9 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch(item.getItemId()){
             case R.id.action_instructions:
-                Intent intent = new Intent(this, InstructionsActivity.class);
+                Intent intent = new Intent(this, InfoActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.go_left_enter, R.anim.go_left_exit);
                 break;
         }
         return super.onOptionsItemSelected(item);
@@ -52,7 +57,8 @@ public class MainActivity extends AppCompatActivity {
 
             int liars = Utils.getRandom().nextInt((int)(players*liars_percentage)) + 1;
 
-            Utils.start(this, createList(players, liars));
+            initialiseList(players, liars);
+            Utils.start(this, playersList);
             startActivity(SortingActivity.newIntent(this, liars, players));
             overridePendingTransition(R.anim.go_left_enter, R.anim.go_left_exit);
         }catch (NumberFormatException e){
@@ -76,28 +82,14 @@ public class MainActivity extends AppCompatActivity {
         }
         return true;
     }
-    private boolean [] createList(int players, int liars){
-        boolean [] playerList = new boolean[players];
-        for(int i = 0; i<players; i++){
-            playerList[i] = (i >= liars);
-        }
-        shuffleArray(playerList);
-        return playerList;
-    }
+    private void initialiseList(int players, int liars){
+        playersList = new ArrayList<Boolean>(players);
 
-    private static void shuffleArray(boolean[] array){
-        int index;
-        Random random = Utils.getRandom();
-        for (int i = array.length - 1; i > 0; i--)
-        {
-            index = random.nextInt(i + 1);
-            if (index != i)
-            {
-                array[index] ^= array[i];
-                array[i] ^= array[index];
-                array[index] ^= array[i];
-            }
+        for(int i = 0; i<players; i++){
+            playersList.add((i >= liars));
         }
+
+        Collections.shuffle(playersList);
     }
 
 }

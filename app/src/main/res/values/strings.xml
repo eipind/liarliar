@@ -1,16 +1,17 @@
 <resources>
     <string name="app_name">LiarLiar</string>
-    <string name="title_activity_instructions">Instructions</string>
+    <string name="title_activity_info">Info</string>
     <string name="num_player_hint_err_less_2">Number of players must be greater than 2</string>
     <string name="num_player_hint_err_more_99">Number of players must be less than 100</string>
     <string name="next_player">Next Player</string>
     <string name="num_players_hint">Number of Players</string>
     <string name="start_playing">Start Playing</string>
     <string name="actionbar_font_filename">fonts/Lobster_1.3.otf</string>
+    <string name="word_list_filename">Wordlist.txt</string>
     <string name="title_activity_sorting">Sorting</string>
-    <string name="instructions_rules_fragment_title">Rules</string>
-    <string name="instructions_tips_fragment_title">Tips</string>
-    <string name="instructions_example_fragment_title">Example</string>
+    <string name="info_rules_fragment_title">Rules</string>
+    <string name="info_tips_fragment_title">Tips</string>
+    <string name="info_example_fragment_title">Example</string>
     <plurals name="suffix_edit_text">
         <item quantity="one">player</item>
         <item quantity="other">players</item>

@@ -17,21 +17,19 @@ import android.view.ViewGroup;
 
 import android.widget.TextView;
 
-public class InstructionsActivity extends AppCompatActivity {
+public class InfoActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_instructions);
+        setContentView(R.layout.activity_info);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle(R.string.title_activity_instructions);
-        setSupportActionBar(toolbar);
+        setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
+
         Utils.setUpBackIndicator(this);
-        SectionsPagerAdapter adapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
         ViewPager pager = findViewById(R.id.container);
-        pager.setAdapter(adapter);
+        pager.setAdapter(new SectionsPagerAdapter(getSupportFragmentManager()));
 
         TabLayout tl = findViewById(R.id.tab_layout);
         tl.setupWithViewPager(pager);
@@ -40,17 +38,18 @@ public class InstructionsActivity extends AppCompatActivity {
     @Override
     public boolean onSupportNavigateUp() {
         startActivity(new Intent(this, MainActivity.class));
+        overridePendingTransition(R.anim.go_right_enter, R.anim.go_right_exit);
         return super.onSupportNavigateUp();
     }
 
-    public static class InstructionFragment extends Fragment {
+    public static class InfoFragment extends Fragment {
 
         private static final String ARG_SECTION_NUMBER = "section_number";
 
-        public InstructionFragment() {}
+        public InfoFragment() {}
 
-        public static InstructionFragment newInstance(int sectionNumber) {
-            InstructionFragment fragment = new InstructionFragment();
+        public static InfoFragment newInstance(int sectionNumber) {
+            InfoFragment fragment = new InfoFragment();
             Bundle args = new Bundle();
             args.putInt(ARG_SECTION_NUMBER, sectionNumber);
             fragment.setArguments(args);
@@ -60,13 +59,13 @@ public class InstructionsActivity extends AppCompatActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_instructions, container, false);
+            View rootView = inflater.inflate(R.layout.fragment_info, container, false);
             TextView textView = rootView.findViewById(R.id.instruction_textbox);
-            setInstructionContent(textView, (int) getArguments().get(ARG_SECTION_NUMBER));
+            setInfoContent(textView, (int) getArguments().get(ARG_SECTION_NUMBER));
             return rootView;
         }
 
-        private void setInstructionContent(TextView tv, int sectionNumber) {
+        private void setInfoContent(TextView tv, int sectionNumber) {
 
             switch (sectionNumber){
                 case 0:
@@ -90,7 +89,7 @@ public class InstructionsActivity extends AppCompatActivity {
 
         @Override
         public Fragment getItem(int position) {
-            return InstructionFragment.newInstance(position);
+            return InfoFragment.newInstance(position);
         }
 
         @Override
@@ -102,11 +101,11 @@ public class InstructionsActivity extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             switch (position){
                 case 0:
-                    return getString(R.string.instructions_rules_fragment_title);
+                    return getString(R.string.info_rules_fragment_title);
                 case 1:
-                    return getString(R.string.instructions_tips_fragment_title);
+                    return getString(R.string.info_tips_fragment_title);
                 case 2:
-                    return getString(R.string.instructions_example_fragment_title);
+                    return getString(R.string.info_example_fragment_title);
             }
             return null;
         }

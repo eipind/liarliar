@@ -17,6 +17,7 @@ public class SortingActivity extends AppCompatActivity {
 
     public static final String PLAYERS_ARG = "number_of_players";
     public static final String LIARS_ARG = "number_of_liars";
+    private Utils.LiarLiarData lld;
 
     private static Scene S1, S2, S3, S4;
     private static ViewGroup VG;
@@ -33,6 +34,7 @@ public class SortingActivity extends AppCompatActivity {
         setUpScenes();
         num_of_liars = getIntent().getIntExtra(LIARS_ARG,0);
         num_of_players = getIntent().getIntExtra(PLAYERS_ARG,0);
+        lld = Utils.getData(this);
         reveal_card_body = getResources().getQuantityString(R.plurals.reveal_card_body, num_of_liars, num_of_liars);
         showRevealCard();
     }
@@ -62,7 +64,7 @@ public class SortingActivity extends AppCompatActivity {
     public void onBackPressed(){}
 
     public void onClickReveal(View view){
-        if(Utils.getNextPlayer(this)){
+        if(lld.getNext()){
             showActivity(State.REVEALING_WORD);
         }else{
             showActivity(State.REVEALING_LIAR);
@@ -70,7 +72,7 @@ public class SortingActivity extends AppCompatActivity {
     }
 
     public void onClickNextPlayer(View view) {
-        if(Utils.hasNextPlayer(this)){
+        if(lld.hasNext()){
             showActivity(State.HIDING);
         }else{
             showActivity(State.END);
@@ -112,7 +114,7 @@ public class SortingActivity extends AppCompatActivity {
 
     private void showWordCard(){
         TextView gameWordText = findViewById(R.id.word_card_body);
-        gameWordText.setText(Utils.getCurrentWord(this).toUpperCase());
+        gameWordText.setText(lld.word.toUpperCase());
     }
 
     private enum State {

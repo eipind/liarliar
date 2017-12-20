@@ -24,7 +24,7 @@
             android:label="@string/title_activity_sorting"
             android:theme="@style/Theme.AppCompat"/>
         <activity
-            android:name=".InstructionsActivity"
+            android:name=".InfoActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar">
